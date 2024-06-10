@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.12 72.92">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #be0328;
+        font-family: Casey-Regular, Casey;
+        stroke: #be0328;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        font-size: 20px;
+      }
+
+      .cls-3 {
+        font-size: 26px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-1" transform="translate(.25 16.65)"><tspan class="cls-2"><tspan x="0" y="0">Canadian</tspan></tspan><tspan class="cls-2" x="0" y="18">made</tspan><tspan class="cls-3" x="32.7" y="16">,</tspan><tspan class="cls-2"><tspan x="0" y="36">nutritionally</tspan></tspan><tspan class="cls-2"><tspan x="0" y="54">complete</tspan></tspan></text>
+  </g>
+</svg>
