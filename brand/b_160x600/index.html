@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>160x600</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ad_container {
+        width: 160px;
+        height: 600px;
+        position: relative;
+        background-image: url("./assets/bg.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .crown_1 {
+        position: absolute;
+        left: 127px;
+        top: 37px;
+        opacity: 0;
+        animation: bounceIn 0.8s linear 1.7s 1 forwards;
+      }
+      .crown_2 {
+        position: absolute;
+        left: 127px;
+        top: 37px;
+        opacity: 0;
+        animation: bounceIn 0.8s linear 1.7s 1 forwards;
+      }
+      .product {
+        position: absolute;
+        left: 30px;
+        top: 0px;
+      }
+      .text {
+        position: absolute;
+        left: 327px;
+        top: 109px;
+      }
+      .buy_now_btn {
+        position: absolute;
+        left: 326px;
+        top: 386px;
+        opacity: 0;
+        animation: bump 0.5s linear 1.7s 1 forwards;
+      }
+    </style>
+    <style>
+      @-webkit-keyframes bounceIn {
+        from,
+        20%,
+        40%,
+        60%,
+        80%,
+        to {
+          -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+          );
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        0% {
+          opacity: 0;
+          -webkit-transform: scale3d(0.3, 0.3, 0.3);
+          transform: scale3d(0.3, 0.3, 0.3);
+        }
+
+        20% {
+          -webkit-transform: scale3d(1.1, 1.1, 1.1);
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        40% {
+          -webkit-transform: scale3d(0.9, 0.9, 0.9);
+          transform: scale3d(0.9, 0.9, 0.9);
+        }
+
+        60% {
+          opacity: 1;
+          -webkit-transform: scale3d(1.03, 1.03, 1.03);
+          transform: scale3d(1.03, 1.03, 1.03);
+        }
+
+        80% {
+          -webkit-transform: scale3d(0.97, 0.97, 0.97);
+          transform: scale3d(0.97, 0.97, 0.97);
+        }
+
+        to {
+          opacity: 1;
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+      }
+      @keyframes bounceIn {
+        from,
+        20%,
+        40%,
+        60%,
+        80%,
+        to {
+          -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+          );
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        0% {
+          opacity: 0;
+          -webkit-transform: scale3d(0.3, 0.3, 0.3);
+          transform: scale3d(0.3, 0.3, 0.3);
+        }
+
+        20% {
+          -webkit-transform: scale3d(1.1, 1.1, 1.1);
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        40% {
+          -webkit-transform: scale3d(0.9, 0.9, 0.9);
+          transform: scale3d(0.9, 0.9, 0.9);
+        }
+
+        60% {
+          opacity: 1;
+          -webkit-transform: scale3d(1.03, 1.03, 1.03);
+          transform: scale3d(1.03, 1.03, 1.03);
+        }
+
+        80% {
+          -webkit-transform: scale3d(0.97, 0.97, 0.97);
+          transform: scale3d(0.97, 0.97, 0.97);
+        }
+
+        to {
+          opacity: 1;
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+      }
+      @-webkit-keyframes bump {
+        0% {
+          -webkit-transform: scale(1, 1);
+          opacity: 1;
+        }
+        10% {
+          -webkit-transform: scale(1.1, 1.1);
+          opacity: 0.7;
+        }
+        50% {
+          -webkit-transform: scale(0.9, 0.9);
+          opacity: 0.9;
+        }
+        100% {
+          -webkit-transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+      @keyframes bump {
+        0% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+        10% {
+          transform: scale(1.1, 1.1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(0.9, 0.9);
+          opacity: 0.9;
+        }
+        100% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ad_container">
+      <img src="./assets/product.png" alt="Product" class="product" />
+      <div class="crown_1"></div>
+      <div class="crown_2"></div>
+      <img src="./assets/text.png" alt="Niuriss" class="text" />
+      <img src="./assets/buy_now_btn.png" alt="Buy Now" class="buy_now_btn" />
+    </div>
+  </body>
+</html>
