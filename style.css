@@ -16,7 +16,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 5rem;
-  height: 100vh;
 }
 
 .language_btns {

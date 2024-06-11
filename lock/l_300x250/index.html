@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>300x250</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ad_container {
+        width: 300px;
+        height: 250px;
+        position: relative;
+        background-image: url("./assets/bg.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .product {
+        position: absolute;
+        left: -3px;
+        top: 38px;
+      }
+      .text {
+        position: absolute;
+        left: 163px;
+        top: 38px;
+      }
+      .arrow {
+        position: absolute;
+        left: 163px;
+        top: 122px;
+      }
+      .buy_now_btn {
+        position: absolute;
+        left: 163px;
+        top: 168px;
+        opacity: 0;
+        animation: bump 0.5s linear 1.7s 1 forwards;
+      }
+    </style>
+    <style>
+      @-webkit-keyframes bump {
+        0% {
+          -webkit-transform: scale(1, 1);
+          opacity: 1;
+        }
+        10% {
+          -webkit-transform: scale(1.1, 1.1);
+          opacity: 0.7;
+        }
+        50% {
+          -webkit-transform: scale(0.9, 0.9);
+          opacity: 0.9;
+        }
+        100% {
+          -webkit-transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+      @keyframes bump {
+        0% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+        10% {
+          transform: scale(1.1, 1.1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(0.9, 0.9);
+          opacity: 0.9;
+        }
+        100% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+    </style>
+    <style>
+      @-webkit-keyframes animate-svg-stroke-1 {
+        0% {
+          stroke-dashoffset: 349.2319030761719px;
+          stroke-dasharray: 349.2319030761719px;
+        }
+
+        100% {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 349.2319030761719px;
+        }
+      }
+
+      @keyframes animate-svg-stroke-1 {
+        0% {
+          stroke-dashoffset: 349.2319030761719px;
+          stroke-dasharray: 349.2319030761719px;
+        }
+
+        100% {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 349.2319030761719px;
+        }
+      }
+
+      @-webkit-keyframes animate-svg-fill-1 {
+        0% {
+          fill: transparent;
+        }
+
+        100% {
+          fill: rgb(190, 3, 40);
+        }
+      }
+
+      @keyframes animate-svg-fill-1 {
+        0% {
+          fill: transparent;
+        }
+
+        100% {
+          fill: rgb(190, 3, 40);
+        }
+      }
+
+      .a-1 {
+        -webkit-animation: animate-svg-stroke-1 1.5s
+            cubic-bezier(0.47, 0, 0.745, 0.715) 0s both,
+          animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s both;
+        animation: animate-svg-stroke-1 1.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+            0s both,
+          animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ad_container">
+      <img src="./assets/product.png" alt="Product" class="product" />
+      <img src="./assets/text.png" alt="Nuiriss" class="text" />
+      <div class="arrow">
+        <!--?xml version="1.0" encoding="UTF-8"?-->
+        <svg
+          id="Layer_2"
+          data-name="Layer 2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 104 54.98"
+          width="60"
+          height="30"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #be0328;
+                stroke: #be0328;
+                stroke-miterlimit: 10;
+                stroke-width: 0.5px;
+              }
+            </style>
+          </defs>
+          <g id="Layer_1-2" data-name="Layer 1">
+            <path
+              class="cls-1 a-1"
+              d="M6.25,39.95c8.38,3.77,16.76,7.54,25.14,11.29.72.32,1.82.07,2.32.54.49.72.82,1.53.97,2.38-.79.19-1.77.78-2.33.5-4.15-1.98-8.16-4.29-12.35-6.19-4.89-2.21-9.92-4.11-14.89-6.13-.23-.09-.46-.16-.7-.22q-4.94-1.42-2.82-5.23c5.13-1.5,9.81-2.67,14.35-4.26,4.43-1.56,8.71-3.52,13.03-5.38,1.01-.44,1.81-1.39,2.83-1.78.87-.16,1.75-.17,2.62-.03-.23.83-.21,2.1-.75,2.41-2.79,1.65-5.67,3.14-8.63,4.45-4.01,1.75-8.12,3.25-12.16,5.42,3.74.17,7.47.34,11.21.51,8.63.39,16.9-1.55,25.26-3.4,11.18-2.62,21.75-7.4,31.1-14.07,4.77-3.29,8.84-7.61,13.11-11.6,2.89-2.7,5.56-5.63,8.38-8.4.49-.27,1.03-.44,1.58-.48.21.54.28,1.13.19,1.7-1.02,1.56-2.19,3.01-3.5,4.33-4.73,4.45-9.36,9.06-14.44,13.08-4.41,3.34-9.03,6.38-13.84,9.11-8.11,4.84-17.15,7.2-26.24,9.44-9.25,2.25-18.8,3.01-28.28,2.24-3.71-.28-7.44-.44-11.16-.65v.43Z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <img src="./assets/buy_now_btn.png" alt="Buy Now" class="buy_now_btn" />
+    </div>
+  </body>
+</html>
