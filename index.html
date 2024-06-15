@@ -10,10 +10,10 @@
   <body>
     <div class="container">
       <div class="language_btns">
-        <button>EN</button>
-        <button>FR</button>
+        <button class="en active">EN</button>
+        <button class="fr">FR</button>
       </div>
-      <div class="banners">
+      <div class="banners en_banners">
         <div class="banner_list">
           <div class="header"><h1>Brand</h1></div>
           <div class="content">
@@ -165,6 +165,179 @@
           </div>
         </div>
       </div>
+      <div class="banners fr_banners">
+        <div class="banner_list">
+          <div class="header"><h1>Brand</h1></div>
+          <div class="content">
+            <div class="url">
+              <a href="/brand_fr/b_160x600/index.html">
+                <p>160 x 600</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/brand_fr/b_300x250/index.html">
+                <p>300 x 250</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/brand_fr/b_300x600/index.html">
+                <p>300 x 600</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/brand_fr/b_320x50/index.html">
+                <p>320 x 50</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/brand_fr/b_320x480/index.html">
+                <p>320 x 480</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/brand_fr/b_728x90/index.html">
+                <p>728 x 90</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/brand_fr/b_768x1024/index.html">
+                <p>768 x 1024</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/brand_fr/b_970x250/index.html">
+                <p>970 x 250</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/brand_fr/b_1024x768/index.html">
+                <p>1024 x 768</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="banner_list">
+          <div class="header"><h1>Price-Lock</h1></div>
+          <div class="content">
+            <div class="url">
+              <a href="/lock_fr/l_160x600/index.html">
+                <p>160 x 600</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/lock_fr/l_300x250/index.html">
+                <p>300 x 250</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/lock_fr/l_300x600/index.html">
+                <p>300 x 600</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/lock_fr/l_320x50/index.html">
+                <p>320 x 50</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/lock_fr/l_320x480/index.html">
+                <p>320 x 480</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/lock_fr/l_728x90/index.html">
+                <p>728 x 90</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/lock_fr/l_768x1024/index.html">
+                <p>768 x 1024</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/lock_fr/l_970x250/index.html">
+                <p>970 x 250</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/lock_fr/l_1024x768/index.html">
+                <p>1024 x 768</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="banner_list">
+          <div class="header"><h1>Product</h1></div>
+          <div class="content">
+            <div class="url">
+              <a href="/products_fr/p_160x600/index.html">
+                <p>160 x 600</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/products_fr/p_300x250/index.html">
+                <p>300 x 250</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/products_fr/p_300x600/index.html">
+                <p>300 x 600</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/products_fr/p_320x50/index.html">
+                <p>320 x 50</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/products_fr/p_320x480/index.html">
+                <p>320 x 480</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/products_fr/p_728x90/index.html">
+                <p>728 x 90</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/products_fr/p_768x1024/index.html">
+                <p>768 x 1024</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/products_fr/p_970x250/index.html">
+                <p>970 x 250</p>
+              </a>
+            </div>
+            <div class="url">
+              <a href="/products_fr/p_1024x768/index.html">
+                <p>1024 x 768</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script>
+      const en = document.querySelector(".en");
+      const fr = document.querySelector(".fr");
+      const en_banners = document.querySelector(".en_banners");
+      const fr_banners = document.querySelector(".fr_banners");
+
+      en.addEventListener("click", () => {
+        en.classList.add("active");
+        fr.classList.remove("active");
+        en_banners.style.display = "grid";
+        fr_banners.style.display = "none";
+      });
+
+      fr.addEventListener("click", () => {
+        fr.classList.add("active");
+        en.classList.remove("active");
+        fr_banners.style.display = "grid";
+        en_banners.style.display = "none";
+      });
+    </script>
   </body>
 </html>

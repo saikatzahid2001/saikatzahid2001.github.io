@@ -87,3 +87,16 @@ body {
     font-size: 1rem;
   }
 }
+
+.fr_body {
+  background-color: #ed2939;
+}
+
+.fr_banners {
+  display: none;
+}
+
+.active {
+  background-color: #ed2939 !important;
+  color: #ffffff !important;
+}
