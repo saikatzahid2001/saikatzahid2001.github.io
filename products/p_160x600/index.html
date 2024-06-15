@@ -55,7 +55,7 @@
         position: absolute;
         left: 59px;
         top: 575px;
-        animation: bump 0.4s linear 2.7s 1 forwards;
+        animation: fadeIn 0.4s linear 2.7s 1 forwards;
       }
       .buy_now_btn {
         position: absolute;
@@ -218,6 +218,25 @@
         }
         100% {
           transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
           opacity: 1;
         }
       }
@@ -569,7 +588,6 @@
         <img alt="Legal" src="./assets/legal.png" />
       </div>
     </div>
-
     <script>
       setTimeout(() => {
         document.querySelector(".ad_container").classList.add("animation_over");

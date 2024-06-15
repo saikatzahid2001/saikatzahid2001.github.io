@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -60,7 +61,7 @@
         position: absolute;
         top: 724px;
         left: 470px;
-        animation: bump 0.4s linear 2.7s 1 forwards;
+        animation: fadeIn 0.4s linear 2.7s 1 forwards;
       }
 
       .animation_over:hover .crown,
@@ -216,6 +217,25 @@
         }
         100% {
           transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
           opacity: 1;
         }
       }
@@ -727,7 +747,6 @@
         <img alt="Legal" src="./assets/legal.png" />
       </div>
     </div>
-
     <script>
       setTimeout(() => {
         document.querySelector(".ad_container").classList.add("animation_over");
