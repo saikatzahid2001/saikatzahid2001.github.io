@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>300x600</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ad_container {
+        width: 300px;
+        height: 600px;
+        position: relative;
+        background-image: url("./assets/bg.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .product {
+        position: absolute;
+        left: 43px;
+        top: 86px;
+      }
+      .text {
+        position: absolute;
+        left: 70px;
+        top: 374px;
+        width: 165px;
+      }
+      .arrow {
+        position: absolute;
+        left: 115px;
+        top: 297px;
+        transform: scale(-1, -1) rotate(280deg);
+      }
+      .buy_now_btn {
+        position: absolute;
+        left: 65px;
+        top: 520px;
+        opacity: 0;
+        animation: bump 0.5s linear 1.9s 1 forwards;
+      }
+
+      .lock {
+        position: absolute;
+        top: 416px;
+        left: 188px;
+        opacity: 0;
+        animation: bump 0.5s linear 0.2s 1 forwards;
+      }
+    </style>
+    <style>
+      @-webkit-keyframes bump {
+        0% {
+          -webkit-transform: scale(1, 1);
+          opacity: 1;
+        }
+        10% {
+          -webkit-transform: scale(1.1, 1.1);
+          opacity: 0.7;
+        }
+        50% {
+          -webkit-transform: scale(0.9, 0.9);
+          opacity: 0.9;
+        }
+        100% {
+          -webkit-transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+      @keyframes bump {
+        0% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+        10% {
+          transform: scale(1.1, 1.1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(0.9, 0.9);
+          opacity: 0.9;
+        }
+        100% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+    </style>
+    <style>
+      @-webkit-keyframes animate-svg-stroke-1 {
+        0% {
+          stroke-dashoffset: 349.2319030761719px;
+          stroke-dasharray: 349.2319030761719px;
+        }
+
+        100% {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 349.2319030761719px;
+        }
+      }
+
+      @keyframes animate-svg-stroke-1 {
+        0% {
+          stroke-dashoffset: 349.2319030761719px;
+          stroke-dasharray: 349.2319030761719px;
+        }
+
+        100% {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 349.2319030761719px;
+        }
+      }
+
+      @-webkit-keyframes animate-svg-fill-1 {
+        0% {
+          fill: transparent;
+        }
+
+        100% {
+          fill: rgb(190, 3, 40);
+        }
+      }
+
+      @keyframes animate-svg-fill-1 {
+        0% {
+          fill: transparent;
+        }
+
+        100% {
+          fill: rgb(190, 3, 40);
+        }
+      }
+
+      .a-1 {
+        -webkit-animation: animate-svg-stroke-1 1.5s
+            cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both,
+          animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s both;
+        animation: animate-svg-stroke-1 1.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+            0.4s both,
+          animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ad_container">
+      <img alt="Product" class="product" src="./assets/product.png" />
+      <img alt="Nuiriss" class="text" src="./assets/text.png" />
+      <div class="arrow">
+        <!--?xml version="1.0" encoding="UTF-8"?-->
+        <svg
+          data-name="Layer 2"
+          height="50"
+          id="Layer_2"
+          viewbox="0 0 104 54.98"
+          width="55"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #be0328;
+                stroke: #be0328;
+                stroke-miterlimit: 10;
+                stroke-width: 0.5px;
+              }
+            </style>
+          </defs>
+          <g data-name="Layer 1" id="Layer_1-2">
+            <path
+              class="cls-1 a-1"
+              d="M6.25,39.95c8.38,3.77,16.76,7.54,25.14,11.29.72.32,1.82.07,2.32.54.49.72.82,1.53.97,2.38-.79.19-1.77.78-2.33.5-4.15-1.98-8.16-4.29-12.35-6.19-4.89-2.21-9.92-4.11-14.89-6.13-.23-.09-.46-.16-.7-.22q-4.94-1.42-2.82-5.23c5.13-1.5,9.81-2.67,14.35-4.26,4.43-1.56,8.71-3.52,13.03-5.38,1.01-.44,1.81-1.39,2.83-1.78.87-.16,1.75-.17,2.62-.03-.23.83-.21,2.1-.75,2.41-2.79,1.65-5.67,3.14-8.63,4.45-4.01,1.75-8.12,3.25-12.16,5.42,3.74.17,7.47.34,11.21.51,8.63.39,16.9-1.55,25.26-3.4,11.18-2.62,21.75-7.4,31.1-14.07,4.77-3.29,8.84-7.61,13.11-11.6,2.89-2.7,5.56-5.63,8.38-8.4.49-.27,1.03-.44,1.58-.48.21.54.28,1.13.19,1.7-1.02,1.56-2.19,3.01-3.5,4.33-4.73,4.45-9.36,9.06-14.44,13.08-4.41,3.34-9.03,6.38-13.84,9.11-8.11,4.84-17.15,7.2-26.24,9.44-9.25,2.25-18.8,3.01-28.28,2.24-3.71-.28-7.44-.44-11.16-.65v.43Z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <img alt="Buy Now" class="buy_now_btn" src="./assets/buy_now_btn.png" />
+      <div class="lock">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="52"
+          height="58"
+          viewBox="0 0 52 58"
+        >
+          <image
+            id="Vector_Smart_Object"
+            data-name="Vector Smart Object"
+            width="52"
+            height="58"
+            xlink:href="data:img/png;base64,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"
+          />
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
