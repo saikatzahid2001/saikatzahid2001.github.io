@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>মুরগির ঘর — বাইত আল-রিযক</title>
+  <meta name="description" content="বাইত আল-রিযক খামারের মুরগির ঘরের থ্রিডি নকশা: ভেতরে ৯০ × ২২ ফুট, মাচার ওপর ৭ × ৯ ফুটের ২৪টি খোপ, মাঝে ৪ ফুট হাঁটার পথ, সব মাপ হুবহু।">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <img class="logo" src="assets/img/logo.png" alt="বাইত আল-রিযক খামারের লোগো" width="96" height="96">
+      <div class="title">
+        <p class="eyebrow">বাইত আল-রিযক খামার</p>
+        <h1>মুরগির ঘর — থ্রিডি নকশা</h1>
+        <p class="tagline">ভেতরে ৯০ × ২২ ফুট · মাচার ওপর ২৪টি খোপ, প্রতিটি ৭ × ৯ ফুট · মাঝে ৪ ফুট হাঁটার পথ · সব মাপ হুবহু</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== PAGE ===================== -->
+  <main class="wrap layout">
+
+    <!-- The 3D viewer -->
+    <section class="viewer-card" id="viewer-card" aria-label="মুরগির ঘরের থ্রিডি নকশা">
+      <div class="toolbar">
+        <div class="segmented" role="group" aria-label="কোন দিক থেকে দেখবেন">
+          <button type="button" data-view="three" class="active">চারপাশ থেকে</button>
+          <button type="button" data-view="top">ওপর থেকে</button>
+          <button type="button" data-view="walk">ভেতর থেকে</button>
+        </div>
+        <div class="toggles" role="group" aria-label="কী কী দেখাবে">
+          <label><input type="checkbox" id="t-roof"> চাল</label>
+          <label><input type="checkbox" id="t-walls" checked> দেয়াল</label>
+          <label><input type="checkbox" id="t-birds" checked> মুরগি</label>
+          <label><input type="checkbox" id="t-feeders" checked> খাবার ও পানির পাত্র</label>
+          <label><input type="checkbox" id="t-labels" checked> নাম ও মাপ</label>
+          <label><input type="checkbox" id="t-vent"> বাতাস চলাচল</label>
+        </div>
+        <button type="button" class="icon-btn" id="fullscreen" title="পুরো পর্দায় দেখুন" aria-label="পুরো পর্দায় দেখুন">⛶</button>
+      </div>
+
+      <div class="viewer" id="viewer">
+        <div class="tip" id="tip" role="status"></div>
+        <p class="viewer-hint">টেনে ঘোরান · স্ক্রল করে বা দুই আঙুলে ছোট-বড় করুন · ডান বোতাম চেপে বা দুই আঙুলে সরান · খোপের ওপর রাখলে বা ছুঁলে বিস্তারিত দেখাবে</p>
+      </div>
+
+      <ul class="stats">
+        <li><strong>১,৯৮০ বর্গফুট</strong><span>মোট জায়গা</span></li>
+        <li><strong>১,৮৪৮ বর্গফুট</strong><span>মুরগি থাকার জায়গা</span></li>
+        <li><strong>২৪টি খোপ</strong><span>প্রতিটি ৭ × ৯ ফুট</span></li>
+        <li><strong>~৮৩টি</strong><span>এক খোপে মুরগি (৭৯–৮৭)</span></li>
+        <li><strong>~১,৯০০–২,১০০</strong><span>ব্রয়লার বা সোনালি মুরগি</span></li>
+        <li><strong>৪ ফুট</strong><span>হাঁটার পথ</span></li>
+        <li><strong>৩ ফুট</strong><span>মাচার উচ্চতা</span></li>
+      </ul>
+      <p class="note">সব মাপ ফুটে। ৯০ × ২২ ফুট হলো ভেতরের খালি জায়গা, দেয়াল এর বাইরে। বিমের মাথা (২.৭৫ ফুট) আর মাচার বাতার তলার (২.৯১৭ ফুট) মাঝে ২ ইঞ্চি ফাঁক থাকে, তাই প্রতিটি বিমের ওপর একটা পাতলা কাঠ বসিয়ে সেটা ভরানো হয়েছে।</p>
+    </section>
+
+    <!-- Space below the viewer: add your own content here -->
+    <section class="slot" aria-label="আরও তথ্য">
+      <p class="slot-hint">এখানে আরও কিছু যোগ করা যাবে</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© বাইত আল-রিযক খামার</div>
+  </footer>
+
+  <!--
+    Loader. Three.js comes from the CDN as a module; our own files are plain scripts
+    (assets/js/…) so the page also works when index.html is opened straight from disk.
+    The order matters: each file uses the ones listed before it.
+  -->
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+
+    window.Farm = { lib: { THREE, OrbitControls, mergeGeometries }, build: {} };
+
+    const FILES = [
+      'config', 'text', 'materials', 'helpers', 'labels', 'stage',
+      'build/site', 'build/floor', 'build/walls', 'build/roof', 'build/service',
+      'build/platforms', 'build/pens', 'build/equipment', 'build/birds', 'build/extras', 'build/annotations',
+      'zoom', 'ui', 'verify', 'main',
+    ];
+    const load = src => new Promise((ok, fail) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.onload = ok;
+      s.onerror = () => fail(new Error(src));
+      document.head.appendChild(s);
+    });
+
+    // the 3D labels are drawn once, so wait (max 4 s) for the Bangla font first
+    const fontReady = Promise.race([
+      document.fonts.load('600 64px "Hind Siliguri"', 'খোপ ৯'),
+      new Promise(r => setTimeout(r, 4000)),
+    ]).catch(() => {});
+
+    try {
+      for (const f of FILES) await load(`assets/js/${f}.js`);
+      await fontReady;
+      Farm.main();
+    } catch (err) {
+      console.error(err);
+      document.getElementById('viewer').insertAdjacentHTML('beforeend',
+        `<p class="viewer-error">থ্রিডি নকশাটি খোলা গেল না। ইন্টারনেট সংযোগ দেখে পাতাটি আবার খুলুন।<br><small>${err.message}</small></p>`);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* ==========================================================
+   Bayt al-Rizq — Poultry Shed page
+   Colours taken from the farm logo (gold + deep green).
+   ========================================================== */
+:root {
+  --green-900: #163a22;
+  --green-700: #1f5130;
+  --green-500: #2f7d32;
+  --gold-300: #e6d3a1;
+  --gold-500: #c9ad6a;
+  --cream: #f7f2e6;
+  --paper: #ffffff;
+  --ink: #1f2a1f;
+  --muted: #5d6a5d;
+  --line: rgba(31, 42, 31, 0.12);
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(22, 58, 34, 0.10);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font: 16px/1.65 "Hind Siliguri", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+img { max-width: 100%; height: auto; }
+
+.wrap { width: min(1440px, 100% - 32px); margin-inline: auto; }
+
+/* ---------- header ---------- */
+.site-header {
+  background: linear-gradient(135deg, var(--green-900), var(--green-700));
+  color: var(--cream);
+  border-bottom: 4px solid var(--gold-500);
+}
+.header-inner { display: flex; align-items: center; gap: 18px; padding: 18px 0; }
+.logo {
+  width: 96px; height: 96px; flex: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(230, 211, 161, 0.35), 0 6px 18px rgba(0, 0, 0, 0.25);
+  background: var(--gold-300);
+}
+.eyebrow {
+  margin: 0; color: var(--gold-300);
+  font-size: 14px; font-weight: 600; letter-spacing: 0.02em;
+}
+.title h1 {
+  margin: 2px 0 2px;
+  font: 700 clamp(22px, 3vw, 32px)/1.3 "Noto Serif Bengali", "Hind Siliguri", serif;
+}
+.tagline { margin: 0; color: rgba(247, 242, 230, 0.8); font-size: 14px; }
+
+/* ---------- layout: viewer on top, open space below ---------- */
+.layout {
+  display: grid;
+  gap: 20px;
+  padding: 24px 0 32px;
+}
+
+.slot {
+  min-height: 160px;
+  border: 2px dashed rgba(31, 81, 48, 0.22);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex; align-items: center; justify-content: center;
+}
+.slot-hint { margin: 0; color: var(--muted); font-size: 13px; text-align: center; }
+
+@media (max-width: 640px) {
+  .layout { gap: 16px; padding-top: 16px; }
+  .header-inner { gap: 12px; padding: 14px 0; }
+  .logo { width: 64px; height: 64px; }
+}
+
+/* ---------- viewer card ---------- */
+.viewer-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+  display: flex; flex-direction: column; gap: 10px;
+  min-width: 0;
+}
+
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.segmented { display: inline-flex; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; }
+.segmented button {
+  font: inherit; font-size: 13px; font-weight: 600;
+  padding: 7px 12px; border: 0; background: #fff; color: var(--ink); cursor: pointer;
+}
+.segmented button + button { border-left: 1px solid var(--line); }
+.segmented button.active { background: var(--green-500); color: #fff; }
+.segmented button:focus-visible, .icon-btn:focus-visible { outline: 2px solid var(--gold-500); outline-offset: 2px; }
+
+.toggles { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 13px; }
+.toggles label { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; user-select: none; }
+.toggles input { accent-color: var(--green-500); }
+
+.icon-btn {
+  margin-left: auto;
+  font-size: 18px; line-height: 1; width: 34px; height: 34px;
+  border: 1px solid var(--line); border-radius: 9px; background: #fff; cursor: pointer;
+}
+
+.viewer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 340px;
+  max-height: 78vh;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #cfe6f5;
+}
+.viewer canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.viewer-hint {
+  position: absolute; left: 10px; bottom: 8px; margin: 0;
+  padding: 4px 9px; border-radius: 7px;
+  background: rgba(255, 255, 255, 0.82); color: var(--muted); font-size: 12px;
+  pointer-events: none;
+}
+.viewer-error {
+  position: absolute; inset: 0; margin: auto; height: fit-content; width: min(90%, 420px);
+  padding: 14px 16px; border-radius: 10px; background: #fff3f3; color: #8a1c1c; text-align: center;
+}
+.tip {
+  position: absolute; z-index: 2; display: none; pointer-events: none;
+  padding: 6px 10px; border-radius: 7px; white-space: nowrap;
+  background: var(--green-900); color: #fff; font-size: 13px;
+}
+
+.stats {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px;
+}
+.stats li {
+  background: var(--cream); border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px 10px; display: flex; flex-direction: column;
+}
+.stats strong { font-size: 16px; color: var(--green-700); }
+.stats span { font-size: 12px; color: var(--muted); }
+.note { margin: 0; color: var(--muted); font-size: 12px; }
+
+/* full screen: the whole card fills the screen, the viewer takes the free space */
+.viewer-card:fullscreen { border-radius: 0; padding: 12px; }
+.viewer-card:fullscreen .viewer { flex: 1; aspect-ratio: auto; max-height: none; }
+.viewer-card:fullscreen .stats,
+.viewer-card:fullscreen .note { display: none; }
+
+@media (max-width: 640px) {
+  .viewer { aspect-ratio: 4 / 5; min-height: 300px; }
+  .viewer-hint { display: none; }
+  .icon-btn { margin-left: 0; }
+}
+
+/* ---------- footer ---------- */
+.site-footer { border-top: 1px solid var(--line); padding: 16px 0; color: var(--muted); font-size: 13px; }
