@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTA Controls</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #1b1a17; }
+
+    /* 2 × 2 grid filling the whole screen: 1 | 2 on top, 3 | 4 below */
+    .grid {
+      height: 100vh;
+      height: 100dvh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-content: center;        /* the two rows sit together, centred on screen */
+      gap: 6px;
+      padding: 6px;
+    }
+    .grid a { display: flex; justify-content: center; min-width: 0; }
+    .grid img {
+      width: 100%;
+      height: auto;
+      max-height: calc((100dvh - 18px) / 2);   /* both rows always fit a short window */
+      object-fit: contain;          /* whole screenshot always visible, never cropped */
+      display: block;
+    }
+
+    /* narrow phones: one per row, scroll down */
+    @media (max-width: 700px) {
+      .grid { height: auto; grid-template-columns: 1fr; }
+      .grid img { max-height: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="grid">
+    <a href="images/1-in-vehicle.png" target="_blank" rel="noopener"><img src="images/1-in-vehicle.png" alt="In vehicle controls" width="1482" height="556"></a>
+    <a href="images/2-in-vehicle-alt.png" target="_blank" rel="noopener"><img src="images/2-in-vehicle-alt.png" alt="In vehicle controls, second layout" width="1480" height="548"></a>
+    <a href="images/3-on-foot.png" target="_blank" rel="noopener"><img src="images/3-on-foot.png" alt="On foot controls" width="1486" height="552"></a>
+    <a href="images/4-on-foot-alt.png" target="_blank" rel="noopener"><img src="images/4-on-foot-alt.png" alt="On foot controls, second layout" width="1486" height="548"></a>
+  </main>
+</body>
+</html>
